@@ -30,7 +30,13 @@ const generateMatchingQuestion = (questionData, type) => {
       text: instruction,
       style: defaultStyle,
     },
-  }
+  };
+
+  questionData.body = {
+    questions: [
+      { leftWord: '', rightWord: ''}
+    ]
+  };
 }
 
 const generateMultipleChoiceQuestion = (questionData, type) => {
@@ -53,7 +59,7 @@ export default (type) => {
 
   if (type === 'MULTIPLE_CHOICE') {
     generateMultipleChoiceQuestion(generatedQuestion, type);
-  } else if (question.type === 'MULTIPLE_CHOICE') {
+  } else if (type === 'MATCHING') {
     generateMatchingQuestion(generatedQuestion, type);
   }
 

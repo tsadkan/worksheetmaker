@@ -1,5 +1,6 @@
 <template>
   <section>
+    {{ $store.getters.currentQuestionType }}
     <div class="column is-one-third">
       <SideBar/>
     </div>

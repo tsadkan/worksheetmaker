@@ -36,7 +36,7 @@ export default {
     return {
       supportedQuestionTypes: [
         { name: 'Multiple Choice', type: 'MULTIPLE_CHOICE'},
-        { name: 'Matching', type: 'MATHING'},
+        { name: 'Matching', type: 'MATCHING'},
       ]
     };
   },
